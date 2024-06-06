@@ -38,3 +38,4 @@ if st.button('Sortear'):
 
 print("Histórico de vídeos sorteados:")
 print(st.session_state.sorteados)
+os.write(1, f"{st.session_state.sorteados}\n".encode()) 
