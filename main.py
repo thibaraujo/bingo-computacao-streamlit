@@ -2,15 +2,16 @@ import streamlit as st
 import numpy as np
 import random
 
-animais = [
-    "Cachorro", "Gato", "Elefante", "Leão", "Tigre", "Urso", "Zebra", "Girafa",
-    "Rinoceronte", "Hipopótamo", "Cavalo", "Cobra", "Jacaré", "Águia", "Papagaio",
-    "Macaco", "Panda", "Canguru", "Lobo", "Rato", "Coelho", "Raposa", "Tartaruga", "Foca", "Pinguim"
+palavras = [
+    "Engenharia", "Computação", "Algortimo", "Hardware", "Java", "Programas", "Enter",
+    "Pasta", "Mouse", "Teclado", "Computador", "Monitor", "Código", "Programador", "Software",
+    "Arquivo", "Processador", "Banco de dados", "Criptografia", "Backup", "Abas", "Site", "Instagram",
+    "Google"
 ]
 
 def gerar_bingo():
-    random.shuffle(animais)
-    selecionados = animais[:24]
+    random.shuffle(palavras)
+    selecionados = palavras[:24]
     tabela = np.array(selecionados[:12] + ["Bingo"] + selecionados[12:]).reshape(5, 5).tolist()
     return tabela
 
